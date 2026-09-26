@@ -1,7 +1,12 @@
 device_list = []
 
 def add_device():
-    pass
+    name = input("Enter device name: ")
+    ip = input("Enter ip: ")
+    status = input("Enter device status: ")
+    full = name + ip + status
+    device_list.append(full)
+    print(device_list)
 
 def view_device():
     pass
@@ -15,5 +20,8 @@ def find_device(device_list):
 def display_menu():
     pass
 
-while True:
-    pass
+#def main(): 
+    #while True:
+       #userinp = input("")
+
+add_device()
