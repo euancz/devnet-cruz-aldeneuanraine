@@ -9,10 +9,13 @@ def add_device():
     print(device_list)
 
 def view_device():
-    pass
+    for devices in device_list:
+        print (devices)
 
 def count_active_inactive(device_list):
-    pass
+    for devices in device_list:
+        if(devices == "Active"):
+            print(devices)
 
 def find_device(device_list):
     pass
@@ -20,8 +23,10 @@ def find_device(device_list):
 def display_menu():
     pass
 
-#def main(): 
-    #while True:
-       #userinp = input("")
+def main(): 
+    while True:
+       print("=== Network Device Inventory ===")
+       print(" 1. Add a device\n 2. View all devices \n 3. Count active vs inactive devices\n 4. Find a device by name\n 5. Exit")
+       userinp = input("Choose an option: ")
 
-add_device()
+main()
