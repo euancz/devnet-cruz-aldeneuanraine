@@ -12,12 +12,26 @@ def view_device():
         print(devices)
 
 def count_active_inactive(device_list):
-    for devices in device_list:
-        if(devices == "Active"):
-            print(devices)
+    global active, inactive
+    active = []
+    inactive = []
+    for "Active" in device_list:
+        if "Active" in devices:
+            active.append
+            print(len(active))
+        elif "Inactive" in devices:
+            inactive.append
+            print(len(inactive))
 
 def find_device(device_list):
-    pass
+    global inp
+    inp = input("Enter Device name: ")
+    for devices in device_list:
+        if inp == devices:
+            print(inp)
+        else:
+            print("Invalid device name")
+
 
 def display_menu():
     print("=== Network Device Inventory ===")
@@ -33,9 +47,9 @@ def main():
         elif(userinp == "2"):
             view_device()
         elif(userinp == "3"):
-            count_active_inactive()
+            count_active_inactive(active, inactive)
         elif(userinp == "4"):
-            find_device()
+            find_device(inp)
         elif(userinp == "5"):
             running = False
             print("You have exited the program")
