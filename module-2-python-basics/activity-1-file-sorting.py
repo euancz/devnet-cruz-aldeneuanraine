@@ -1,24 +1,25 @@
 """
 Module 2 — Activity: File Sorting with os and shutil
-Student: [your name]
-Date: [date]
+Student: Alden Euan Raine B. Cruz
+Date: 09/27/2026
 
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
 ============================================
-[Paste your working script below first, then come back and explain
-it here: what does your script do, and what rule did you use to
-sort the files? e.g. by extension, by name, by date, etc.]
+its just a simple file sorting program it checks the 
+files of Renejay folder and then they will be sorted 
+based on their .jpg .pdf .txt and they will go to their
+respective folder like for example the jpg will go to images
+
 
 
 ============================================
 KEY VOCABULARY
 ============================================
-- os module:
-- shutil module:
-- file path:
-- directory:
-(add more as needed)
+- os module: the one that checks the files and folders 
+- shutil module: the one that moves files from one to another
+- file path: location of the file or folder
+- directory: another word for a folder
 
 
 ============================================
@@ -30,22 +31,34 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-# --- paste your existing code here ---
+folder = "Renejay"
 
+for file in os.listdir(folder):
+    file_path = os.path.join(folder, file)
+
+    if file.endswith(".jpg"):
+        shutil.move(file_path, folder + "/Images/" + file)
+
+    elif file.endswith(".pdf"):
+        shutil.move(file_path, folder + "/Documents/" + file)
+
+    elif file.endswith(".txt"):
+        shutil.move(file_path, folder + "/Text/" + file)
+
+print("Files sorted!")
 
 """
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what tripped you up while building this? e.g. a path that didn't
-exist, a file that got overwritten, something that didn't work the
-way you expected at first]
+the mistake i made is how i declared the folder path and how
+i was trying to use the loop i was integrating it wrong
 
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional: how is this similar to what real automation scripts do?
-think about your own gradebook/attendance workflow — could something
-like this save you time there?]
+it could help me organize my files from school in my computer since
+my computer is a mess and it would be a pain to sort it manually 
+
 """
