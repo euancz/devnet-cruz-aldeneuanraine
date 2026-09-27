@@ -7,7 +7,7 @@
 
 ## What is Git? What is GitHub? (explain like you're teaching a friend who's never used either)
 
-git is where you can save your progress when you edit changes on a code and then github is where you can store those edits online and it makes them safe just incase you run into hardware problems
+git is where you can save your progress when you edit changes on a code and then you can go back when you accidentally do something wrong and github is where you can store those edits online and it makes them safe just incase you run into hardware problems
 
 ---
 
@@ -27,17 +27,22 @@ git is where you can save your progress when you edit changes on a code and then
 [Describe, step by step, a real branch → commit → push → PR you did. Include the actual commands you used.]
 
 ```
-# paste your actual commands here
+git branch - here i checked first my branches
+git branch module-1 - here is where i made the branch 
+git switch module-1 - here is where i made the change of branch from main to module-1
+git add . - here is where i add the files
+git commit -m "finishing module 1" here is where i do the save point 
+git push --set-upstream origin module-1 - here is where i pushed the changes i made and setup my remote 
 ```
 
 ---
 
 ## A mistake I made (or one I want to avoid)
 
-[What tripped you up? A confusing error message, committing to the wrong branch, a merge conflict — explain it so a classmate reading this avoids the same mistake.]
+a merge conflict since it can be tricky to properly merge the both files when this happens
 
 ---
 
 ## How this connects to something else
 
-[Optional: how does version control relate to anything else you've learned or used before?]
+its like a save point in a game you can go back to it anytime
